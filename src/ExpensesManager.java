@@ -1,10 +1,10 @@
 import java.util.ArrayList; // Импортируйте ArrayList
 
 public class ExpensesManager {
-    ArrayList<Double> expenses = new ArrayList<>(); // Так будет работать
+    ArrayList<Double> expenses;
 
     ExpensesManager() {
-       // ArrayList<Double> expenses = new ArrayList<>(); // Создайте список в конструкторе << А так предлагают сделать в тренажёре.
+       expenses = new ArrayList<>();
     }
     // Номер дня больше не нужен
     double saveExpense(double moneyBeforeSalary, double expense) {
