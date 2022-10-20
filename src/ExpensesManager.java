@@ -1,15 +1,15 @@
 import java.util.ArrayList; // Импортируйте ArrayList
 
 public class ExpensesManager {
-    ArrayList<Double> expenses = new ArrayList<>();; // Замените массив списком
+    ArrayList<Double> expenses = new ArrayList<>(); // Так будет работать
 
     ExpensesManager() {
-       // ArrayList<Double> expenses = new ArrayList<>(); // Создайте список в конструкторе
+       // ArrayList<Double> expenses = new ArrayList<>(); // Создайте список в конструкторе << А так предлагают сделать в тренажёре.
     }
     // Номер дня больше не нужен
     double saveExpense(double moneyBeforeSalary, double expense) {
         moneyBeforeSalary = moneyBeforeSalary - expense;
-        expenses.add(expense); // Эту строку нужно убрать
+        expenses.add(expense);                            // Ошибка NullPointerException возникает здесь. expenses = null
         System.out.println("Значение сохранено! Ваш текущий баланс в рублях: " + moneyBeforeSalary);
         if (moneyBeforeSalary < 1000) {
             System.out.println("На вашем счету осталось совсем немного. Стоит начать экономить!");
